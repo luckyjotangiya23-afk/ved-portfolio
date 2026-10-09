@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ved Prakash Sharma | UGC and brand shoot creator</title>
+<meta name="description" content="Ved Prakash Sharma makes UGC videos and brand shoots for Reels. Book a shoot on Instagram @fimsbyraja.">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --photo-bg: #ECEDEA;          /* matches the blown-out window light in the portrait */
+    --bg: #ECEDEA;
+    --text: #131313;
+    --muted: #55595A;
+    --line: rgba(19,19,19,.18);
+    --mint: #C5DCCD;
+    --btn-bg: #131313;
+    --btn-text: #F4F5F2;
+    --rec: #B8433A;
+    --font: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #111312; --text: #ECEDEA; --muted: #A3A8A5; --line: rgba(236,237,234,.2);
+      --mint: #1D2B24; --btn-bg: #ECEDEA; --btn-text: #131313;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #111312; --text: #ECEDEA; --muted: #A3A8A5; --line: rgba(236,237,234,.2);
+    --mint: #1D2B24; --btn-bg: #ECEDEA; --btn-text: #131313;
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); background: var(--bg); }
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: var(--font); font-size: 1.0625rem; line-height: 1.55;
+    -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  }
+  img, video { max-width: 100%; display: block; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--rec); outline-offset: 3px; }
+
+  .btn {
+    display: inline-block; background: var(--btn-bg); color: var(--btn-text);
+    text-decoration: none; font-weight: 600; font-size: 1rem;
+    padding: .95rem 1.6rem; border-radius: 999px; transition: transform .15s ease;
+  }
+  .btn:hover { transform: translateY(-2px); }
+
+  /* ---------- Hero: the portrait is multiplied into the page so its blown-out window light becomes the paper. ---------- */
+  .hero {
+    position: relative; isolation: isolate; overflow: hidden;
+    background: var(--photo-bg); color: #131313;
+    min-height: 100vh; min-height: 100svh;
+    display: grid; grid-template-rows: auto 1fr auto; align-content: space-between;
+    padding: clamp(1.25rem, 3.5vw, 3rem);
+  }
+  .portrait {
+    position: absolute; top: 0; right: 0; z-index: 0;
+    height: 100%; width: calc(100svh * 0.5624); max-width: 92vw;
+    object-fit: cover; object-position: 100% 50%;
+    mix-blend-mode: multiply;
+    animation: develop 1.6s cubic-bezier(.2,.7,.2,1) both;
+  }
+  @keyframes develop { from { opacity: 0; } to { opacity: 1; } }
+  .name {
+    position: relative; z-index: 2; margin: 0;
+    color: #131313;
+    font-weight: 800; font-stretch: 80%;
+    font-size: clamp(4.5rem, 15.5vw, 16rem); line-height: .86; letter-spacing: -.04em;
+  }
+  .name span { display: block; }
+  .hero-meta { position: relative; z-index: 3; grid-row: 3; max-width: 28rem; }
+  .role { margin: 0 0 .6rem; font-size: 1.35rem; font-weight: 700; letter-spacing: -.01em; }
+  .lede { margin: 0 0 1.4rem; color: #3B3F40; max-width: 26rem; }
+  .hero .btn { background: #131313; color: #F4F5F2; }
+
+  @media (max-width: 900px) {
+    .hero { grid-template-rows: 85svh auto; align-content: start; padding-bottom: 2rem; }
+    .portrait {
+      top: 25svh; height: 60svh; width: min(100vw, calc(60svh * 0.5624));
+      -webkit-mask-image: linear-gradient(to bottom, transparent, #000 16%, #000 78%, transparent);
+              mask-image: linear-gradient(to bottom, transparent, #000 16%, #000 78%, transparent);
+    }
+    .name { font-size: clamp(4.2rem, 22vw, 9rem); }
+    .hero-meta { grid-row: 2; }
+  }
+
+  /* ---------- Work ---------- */
+  .section { padding: clamp(3.5rem, 8vw, 7rem) clamp(1.25rem, 3.5vw, 3rem); }
+  .work { background: var(--mint); }
+  .section h2 {
+    margin: 0 0 .6rem; font-weight: 800; font-stretch: 85%;
+    font-size: clamp(2.4rem, 6vw, 5rem); line-height: .95; letter-spacing: -.035em;
+  }
+  .section .sub { margin: 0 0 clamp(2rem, 5vw, 3.5rem); color: var(--muted); max-width: 34rem; }
+
+  .reels {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(1rem, 3vw, 2.5rem); max-width: 1180px; margin: 0 auto;
+    align-items: start;
+  }
+  .reels > .card:nth-child(2) { margin-top: clamp(2rem, 6vw, 5rem); }
+  .head { max-width: 1180px; margin: 0 auto; }
+  .card { margin: 0; }
+  .frame {
+    position: relative; aspect-ratio: 9 / 16; border-radius: 20px; overflow: hidden;
+    background: #131313;
+  }
+  .frame video { width: 100%; height: 100%; object-fit: cover; }
+  .sound {
+    position: absolute; right: .75rem; bottom: .75rem;
+    width: 2.75rem; height: 2.75rem; border-radius: 50%; border: 0; cursor: pointer;
+    display: grid; place-items: center;
+    background: rgba(19,19,19,.62); color: #fff; backdrop-filter: blur(6px);
+  }
+  .sound svg { width: 1.3rem; height: 1.3rem; }
+  .sound .on { display: none; }
+  .sound[aria-pressed="true"] .on { display: block; }
+  .sound[aria-pressed="true"] .off { display: none; }
+  .card figcaption { padding-top: .9rem; }
+  .card h3 { margin: 0; font-size: 1.2rem; font-weight: 700; letter-spacing: -.01em; }
+  .card p { margin: .2rem 0 0; color: var(--muted); font-size: .98rem; }
+
+  @media (max-width: 900px) {
+    .reels {
+      display: flex; gap: 1rem; overflow-x: auto; max-width: none;
+      margin: 0 calc(-1 * clamp(1.25rem, 3.5vw, 3rem)); padding: 0 clamp(1.25rem, 3.5vw, 3rem) .5rem;
+      scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+      scroll-padding-left: clamp(1.25rem, 3.5vw, 3rem);
+    }
+    .reels > .card { flex: 0 0 72vw; max-width: 340px; scroll-snap-align: start; margin-top: 0 !important; }
+  }
+
+  /* ---------- What I shoot ---------- */
+  .shoot-grid {
+    max-width: 1180px; margin: 0 auto; display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.25rem, 3vw, 2.5rem);
+  }
+  .shoot-grid > div { border-top: 2px solid var(--text); padding-top: 1rem; }
+  .shoot-grid h3 { margin: 0 0 .4rem; font-size: 1.35rem; font-weight: 700; letter-spacing: -.015em; }
+  .shoot-grid p { margin: 0; color: var(--muted); max-width: 22rem; }
+  @media (max-width: 900px) { .shoot-grid { grid-template-columns: 1fr; } }
+
+  /* ---------- Contact ---------- */
+  .contact { border-top: 1px solid var(--line); }
+  .contact-inner { max-width: 1180px; margin: 0 auto; }
+  .contact h2 { max-width: 14ch; }
+  .contact .sub { margin-bottom: 1.6rem; }
+  footer {
+    max-width: 1180px; margin: clamp(3rem, 7vw, 6rem) auto 0; padding-top: 1.2rem;
+    border-top: 1px solid var(--line); color: var(--muted); font-size: .92rem;
+    display: flex; flex-wrap: wrap; gap: .5rem 2rem; justify-content: space-between;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .portrait { animation: none; }
+    .btn { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img class="portrait" src="ved.jpg" alt="Ved Prakash Sharma in side profile, looking up toward a bright window">
+  <h1 class="name"><span>Ved</span><span>Prakash</span><span>Sharma</span></h1>
+  <div class="hero-meta">
+    <p class="role">UGC and brand shoot creator</p>
+    <p class="lede">Vertical videos for brands: UGC-style product content and styled shoots, made for Reels.</p>
+    <a class="btn" href="https://www.instagram.com/fimsbyraja/" target="_blank" rel="noopener">Book a shoot on Instagram</a>
+  </div>
+</header>
+
+<main>
+  <section class="section work" id="work" aria-labelledby="work-title">
+    <div class="head">
+      <h2 id="work-title">Selected work</h2>
+      <p class="sub">Three recent shoots, all vertical. Tap the speaker on any video for sound.</p>
+    </div>
+    <div class="reels">
+      <figure class="card">
+        <div class="frame">
+          <video muted loop playsinline preload="metadata" poster="videos/bag.jpg" src="videos/bag.mp4" aria-label="Camera backpack shoot on railway tracks"></video>
+          <button class="sound" type="button" aria-pressed="false" aria-label="Sound">
+            <svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4V5z"/><path d="m22 9-6 6M16 9l6 6"/></svg>
+            <svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+          </button>
+        </div>
+        <figcaption>
+          <h3>Camera backpack on location</h3>
+          <p>Brand shoot. The bag on railway tracks, a look inside the compartments, and a walk-through in use.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="card">
+        <div class="frame">
+          <video muted loop playsinline preload="metadata" poster="videos/shirt.jpg" src="videos/shirt.mp4" aria-label="Black t-shirt shoot on a rooftop"></video>
+          <button class="sound" type="button" aria-pressed="false" aria-label="Sound">
+            <svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4V5z"/><path d="m22 9-6 6M16 9l6 6"/></svg>
+            <svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+          </button>
+        </div>
+        <figcaption>
+          <h3>Black tee, rooftop shoot</h3>
+          <p>Apparel shoot. Phone-in-hand detail shots, fabric close-ups and a low-angle rooftop portrait.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="card">
+        <div class="frame">
+          <video muted loop playsinline preload="metadata" poster="videos/mood.jpg" src="videos/mood.mp4" aria-label="Rainy-day chai and snacks video"></video>
+          <button class="sound" type="button" aria-pressed="false" aria-label="Sound">
+            <svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4V5z"/><path d="m22 9-6 6M16 9l6 6"/></svg>
+            <svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+          </button>
+        </div>
+        <figcaption>
+          <h3>Chai and gathiya in the rain</h3>
+          <p>UGC-style food video. Chai on the stove, a rooftop table, snacks, and a Hinglish caption.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="services" aria-labelledby="services-title">
+    <div class="head">
+      <h2 id="services-title">What I shoot</h2>
+      <p class="sub">Content built for a phone screen, shot on location with natural light.</p>
+    </div>
+    <div class="shoot-grid">
+      <div>
+        <h3>UGC videos</h3>
+        <p>Product videos that feel like a real person made them: handheld, honest and easy to watch.</p>
+      </div>
+      <div>
+        <h3>Brand and product shoots</h3>
+        <p>Styled shots of bags, gear and everyday products, in places that fit the brand.</p>
+      </div>
+      <div>
+        <h3>Apparel and lifestyle</h3>
+        <p>Detail shots and portraits that show how a piece looks, fits and moves.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact" aria-labelledby="contact-title">
+    <div class="contact-inner">
+      <h2 id="contact-title">Have a product to shoot?</h2>
+      <p class="sub">Send a DM with what you sell and where you want the content to run.</p>
+      <a class="btn" href="https://www.instagram.com/fimsbyraja/" target="_blank" rel="noopener">Message @fimsbyraja</a>
+      <footer>
+        <span>Ved Prakash Sharma</span>
+        <span>Instagram @fimsbyraja</span>
+      </footer>
+    </div>
+  </section>
+</main>
+
+<script>
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+
+  function setSound(card, on) {
+    var v = card.querySelector('video'), b = card.querySelector('.sound');
+    v.muted = !on;
+    b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    b.setAttribute('aria-label', on ? 'Mute' : 'Unmute');
+  }
+  cards.forEach(function (card) {
+    var v = card.querySelector('video'), b = card.querySelector('.sound');
+    b.setAttribute('aria-label', 'Unmute');
+    b.addEventListener('click', function () {
+      var turnOn = v.muted;
+      cards.forEach(function (c) { setSound(c, false); });
+      if (turnOn) { setSound(card, true); }
+      if (v.paused) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+    });
+    v.addEventListener('click', function () {
+      if (v.paused) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } else { v.pause(); }
+    });
+  });
+
+  if ('IntersectionObserver' in window && !reduce) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        var v = e.target;
+        if (e.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+        else { v.pause(); }
+      });
+    }, { threshold: 0.6 });
+    cards.forEach(function (c) { io.observe(c.querySelector('video')); });
+  }
+})();
+</script>
+</body>
+</html>
